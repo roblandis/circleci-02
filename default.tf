@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "$BUCKET"
+  bucket = "rob-circle-ci-test1"
   acl    = "private"
 
   tags {
