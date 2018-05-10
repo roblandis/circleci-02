@@ -1,10 +1,12 @@
 provider "aws" {
-  region = "us-east-1"
 }
 
-resource "aws_vpc" "minimal" {
-  cidr_block = "10.0.0.0/16"
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket"
+  acl    = "private"
+
   tags {
-    Name = "minimal"
+    Name        = "My bucket"
+    Environment = "Dev"
   }
 }
